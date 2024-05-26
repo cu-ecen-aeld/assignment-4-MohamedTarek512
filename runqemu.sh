@@ -6,7 +6,7 @@
 
 qemu-system-aarch64 \
     -M virt  \
-    -cpu cortex-a53 -nographic -smp 1 \
+    -cpu cortex-a53 -nographic -smp 1 -m 1024\
     -kernel buildroot/output/images/Image \
     -append "rootwait root=/dev/vda console=ttyAMA0" \
     -netdev user,id=eth0,hostfwd=tcp::10022-:22 \
